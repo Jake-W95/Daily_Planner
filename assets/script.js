@@ -39,19 +39,37 @@ var row5PM = container.children()[8];
 
 
 $('button').click(function(){
-    if($(this).parent()[0].innerHTML == row9AM.innerHTML)  {
-var textbox = $(this).siblings()[1];
-// textbox.text() = 
-                /////////////////// This is the textarea
-        // console.log($(this).siblings()[1].val())
-
-
-        localStorage.setItem('9AM', $(this).siblings()[1].value)
-    // alert('9AM')
-
+    var thisRow = $(this).parent()[0].innerHTML;
+    var tBoxVal = $(this).siblings()[1].value;
+// console.log(th, 'tBox')
+    if( thisRow == row9AM.innerHTML)  {
+        localStorage.setItem('9AM', tBoxVal)
 }
+    if( thisRow == row10AM.innerHTML){
+    localStorage.setItem('10AM', tBoxVal )
 }
-)
+    if(thisRow == row11AM.innerHTML){
+        localStorage.setItem('11AM', tBoxVal)
+    }
+    if(thisRow == row12PM.innerHTML){
+        localStorage.setItem('12PM', tBoxVal)
+    }
+    if(thisRow == row1PM.innerHTML){
+        localStorage.setItem('1PM', tBoxVal)
+    }
+    if(thisRow == row2PM.innerHTML){
+        localStorage.setItem('2PM', tBoxVal)
+    }
+    if(thisRow == row3PM.innerHTML){
+        localStorage.setItem('3PM', tBoxVal)
+    }
+    if(thisRow == row4PM.innerHTML){
+        localStorage.setItem('4PM', tBoxVal)
+    }
+    if(thisRow == row5PM.innerHTML){
+        localStorage.setItem('5PM', tBoxVal)
+    }
+})
 
 
 
