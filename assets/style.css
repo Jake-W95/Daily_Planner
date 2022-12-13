@@ -5,6 +5,7 @@ body {
 }
 
 textarea {
+  width: 80%;
   background: transparent;
   border: none;
   resize: none;
@@ -21,7 +22,11 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-
+.container {
+  /* width: 80%; */
+  display: flex;
+  flex-direction: column;
+}
 .description {
   white-space: pre-wrap;
   background-color: #ffffff;
@@ -36,12 +41,14 @@ textarea {
 
 .row {
   /* width: 100%; */
+  display: flex;
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
 }
 
 .hour {
+  /* width: 100%; */
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
@@ -63,6 +70,7 @@ textarea {
 }
 
 .saveBtn {
+  width: 10%;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
