@@ -1,6 +1,9 @@
 # Daily_Planner
 ## A simple planner for a work day
 
+### Live Page: https://jake-w95.github.io/Daily_Planner/
+
+
 The planner is built of 9 rows (for each hour from 9AM - 5PM), each containing the hour, a block of text for notes/apppointments and a save button.
 Focus has been given to jquery in the composition of this page.
 
