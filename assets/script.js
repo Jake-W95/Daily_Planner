@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////////Clock
 var currentDay = $('#currentDay');
 currentDay.text(moment().format('dddd, Do MMMM YYYY'))
-var clock = moment().hour(12).format('HHA')
-// console.log(clock)
+var clock = moment().format('HH')
+console.log(parseFloat(clock))
 
 var container = $('.container');
 
@@ -19,7 +19,9 @@ row.append('<button class="saveBtn">');
 
 $('.saveBtn').append('<i class="far fa-save"></i>')
 
+// console.log(row[0].childNodes[0].innerText)
 
+// console.log(parseInt($('.hour')))
 
 //////////////////////////////////////////////////// Individual rows
 var row9AM = container.children()[0];
@@ -53,11 +55,6 @@ text2PM.value = localStorage.getItem('2PM');
 text3PM.value = localStorage.getItem('3PM');
 text4PM.value = localStorage.getItem('4PM');
 text5PM.value = localStorage.getItem('5PM');
-
-
-
-
-
 
 ///////////////////////////////////////// SAVE TEXT TO LOCAL STORAGE
 $('button').click(function(){
