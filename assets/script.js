@@ -6,13 +6,19 @@ console.log(clock)
 var container = $('.container');
 var dayStart = moment(09,'h');
 
+//Populate planner with rows
 while (dayStart.hour() < 18){
     // container.append('<div class="row">')git add -
 container.append('<div class="row">' +   `<div class="hour"> ${dayStart.format('ha')} </div>`); 
-console.log($('.row'))
 dayStart.add(1,'hours');
 }
 var row = $('.row');
 row.append('<textarea>');
-row.append('<button class="saveBtn">')
-$('hour').append('hi')
+row.append('<button class="saveBtn">');
+
+$('.saveBtn').append('<i class="far fa-save"></i>')
+
+$('button').click(function(){
+//  console.log(this.prev())
+})
+// btn.cick(alert('hgd'))
