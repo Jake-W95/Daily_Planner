@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////Clock
 var currentDay = $('#currentDay');
 currentDay.text(moment().format('dddd, Do MMMM YYYY'))
-var clock = moment().format('HH')
+var clock = moment().format('ha')
 console.log(parseFloat(clock))
 
 var container = $('.container');
@@ -23,6 +23,8 @@ $('.saveBtn').append('<i class="far fa-save"></i>')
 
 // console.log(parseInt($('.hour')))
 
+
+
 //////////////////////////////////////////////////// Individual rows
 var row9AM = container.children()[0];
 var row10AM = container.children()[1];
@@ -34,6 +36,11 @@ var row3PM = container.children()[6];
 var row4PM = container.children()[7];
 var row5PM = container.children()[8];
 
+/////////////////////////////////////////////////// Custom Attributes
+// console.log(row9AM.childNodes[1])
+console.log(parseFloat(row9AM.childNodes[0].innerHTML))
+// console.log(parseFloat(moment().hour('10').format('hha')))
+// if(parseFloat(row9AM.childNodes[0].text()) )
 ///////////////////////////////////////////////////Load Local Storage
 var text9AM = row9AM.childNodes[1];
 var text10AM = row10AM.childNodes[1];
