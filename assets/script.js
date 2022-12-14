@@ -1,15 +1,15 @@
 //////////////////////////////////////////////////////////////Clock
 var currentDay = $('#currentDay');
 currentDay.text(moment().format('dddd, Do MMMM YYYY'))
-var clock = moment().format('ha')
+var clock = parseFloat(moment().format('hha'))
 console.log('clock', parseFloat(clock))
 
 var container = $('.container');
 
 //////////////////////////////////////////Populate planner with rows
-var dayStart = moment(09, 'h');
+var dayStart = moment(09, 'HH');
 while (dayStart.hour() < 18) {
-    container.append('<div class="row">' + `<div class="hour"> ${dayStart.format('hha')} </div>`);
+    container.append('<div class="row">' + `<div class="hour"> ${dayStart.format('HHA')} </div>`);
     dayStart.add(1, 'hours');
 }
 var row = $('.row');
@@ -37,17 +37,20 @@ var row5PM = container.children()[8];
 // console.log($('.hour'))
 
 
-for(time of $('.hour')){
-    console.log(parseFloat($(time).text()))
-    // $(time).next().addClass('future')
-    if(parseFloat($(time).text()) > clock){
-        // $(time).next().addClass('present')
-        console.log('work')
+for (time of $('.hour')) {
+    // console.log(parseFloat($(time).text()))
+    console.log(clock)
+    if (parseFloat($(time).text()) < clock) {
+        $(time).next().addClass('past')
+    }    else if (parseFloat($(time).text()) > clock) {
+        $(time).next().addClass('future')
+    } else {
+        $(time).next().addClass('present')
     }
     // console.log(parseFloat($(time).text()))
 
 }
-    
+
 
 // console.log(parseFloat(moment().hour('10').format('hha')))
 // if (parseFloat(row9AM.childNodes[0].innerHTML) < clock) {
